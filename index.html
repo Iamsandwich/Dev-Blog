@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>my selfhosting adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <div class="top_menu">
+        <div><a href="2_03_26.html">2.03.26</a></div>
+        <div><a href="1_03_26.html">1.03.26</a></div>
+        <div><a href="28_02_26.html">28.02.26</a></div>
+    </div>
+<div class="the-text">
+02.03.26<br>
+Today in the evening i attempted to get nxig on docker 
+by myself first.<br>
+After digging a while yesterday, I learned that a 
+Dockerfile is just a textfile with instructions for
+docker, that uses its own specific language.<br>
+Mathy <img src="IMG/Mathy.jpg" alt="Mathy" width="20vw"> offered help
+at nigth but I wanted to try it myself. Worried about
+the fact nginx weighs a lot, and the fact i haven't been
+pronouncing it correctly, ever. LoL.<br><br>
+After a while of building, it failed with an error (wow!)
+
+<div class="programming">
+ => ERROR [2/9] RUN Invoke-WebRequest "http://nginx.org/download/nginx-$($env:NGINX_VERSION).zip" -OutFile C:ngin  0.0s <br>
+------<br>
+ > [2/9] RUN Invoke-WebRequest "http://nginx.org/download/nginx-$($env:NGINX_VERSION).zip" -OutFile C:nginx.zip:<br>
+------<br>
+
+ 4 warnings found (use docker --debug to expand):<br>
+ - WorkdirRelativePath: Relative workdir "c:\\nginx\\nginx-1.19.6" can have unexpected results if the base image changes (line 12)<br>
+ - FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)<br>
+ - InvalidBaseImagePlatform: Base image mcr.microsoft.com/powershell:lts-windowsservercore-1809 was pulled with platform "windows(10.0.17763.1697)/amd64", expected "linux/amd64" for current build (line 1)<br>
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 3)<br>
+Dockerfile:6<br>
+--------------------<br>
+   4 |<br>
+   5 |     SHELL ["pwsh", "-command"]<br>
+   6 | >>> RUN Invoke-WebRequest "http://nginx.org/download/nginx-$($env:NGINX_VERSION).zip" -OutFile C:\nginx.zip<br>
+   7 |     RUN Expand-Archive C:\nginx.zip C:\nginx<br>
+   8 |     RUN Remove-Item "C:\nginx\nginx-$($env:NGINX_VERSION)\conf\*.conf" -Verbose<br>
+--------------------<br>
+ERROR: failed to build: failed to solve: failed to compute cache key: link /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/59/fs/Files/Program Files/common files/Microsoft Shared/Ink/en-US/micaut.dll.mui /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/59/fs/Files/Program Files (x86)/common files/Microsoft Shared/ink/en-US/micaut.dll.mui: no such file or directory<br>
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/esm2m0vp2qnempsqbpj8rdeoy<br>
+</div>
+<br>
+Now i have 9 gigs occupied by both projects that didnt work
+and I don't know how to clean those files out yet lol.
+<br>
+went online for advice on that, ran a few cmd commands until
+I got the good one
+<div class="programming">
+ docker system prune<br>
+WARNING! This will remove:<br>
+  - all stopped containers<br>
+  - all networks not used by at least one container<br>
+  - all dangling images<br>
+  - unused build cache<br>
+<br>
+Are you sure you want to continue? [y/N] y<br>
+Deleted build cache objects:<br>
+3bwq39m7uo4wjnyf0huhxqvp7<br>
+stvvchmozz935c63upj5kw9d8<br>
+qodz94a7imzejv3deo3bhjnxa<br>
+15w6zucizka5y0fuyfadcoi1b<br>
+tyool2cxt8uauuug6axd0gazk<br>
+6olbj7b92w6t5lgc6ku7hs9r7<br>
+fisdppfmhhhjsdcz6cdynk3m5<br>
+s3pcwwd1hajzkmfmvjm4z6jkv<br>
+9nlyb2wmh5ay2bnut04id6ave<br>
+mapzngjlfbrnscoprawkfw2ec<br>
+qqm20j1dforgk9hpx1uwojtcq<br>
+<br>
+Total reclaimed space: 6.412GB
+</div>
+<br>
+Yess that is already not bad! I didn't even achive anything. LOL.
+</div>
+</body>
+
+</html>

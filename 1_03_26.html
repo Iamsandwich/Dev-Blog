@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>my selfhosting adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <div class="top_menu">
+        <div><a href="index.html">back to latest entry</a></div>
+    </div>
+<div class="the-text">
+1.03.26<br>
+Aborting everything, attempting to yeet it all out.
+Installing Tailscale.<br>
+So, it turned out that though Tailscale does work on my computer,
+it is entirely unavailable due to sanctions in my region on IOS
+and Android, wow.<br>
+And so instead I installed nextCloud. Just to feel better. <br>
+Thinking i need a domain or subdomain, I started scouring for any,
+even registered somewhere but never activated the account due to all the 
+websites looking like 2002 experiments...<br>
+Asked Mathy <img src="IMG/Mathy.jpg" alt="Mathy" width="20vw"> for adivce.
+about it, she calims i don't even need a publically accessible server.
+Just a local system that i can give specific people acces too.
+Which means I can use Tailscale! Not. <br>
+Mathy <img src="IMG/Mathy.jpg" alt="Mathy" width="20vw"> proceeded
+to advise NetBird and ZeroTier One, both of which I did
+find on the russian app store, yay!<br>
+1. Downloaded and installed NetBird on Laptop (advised by Mathy <img src="IMG/Mathy.jpg" alt="Mathy" width="20vw">)<br>
+2. Set it up, with the server being bit bitchy at times, maaged to register<br>
+3. Installed NetBird on Ipad, couldnt get the login screen<br>
+4. Installed on my iphonr and Android phones, managed to make both work<br>
+5. Ipad took very long to access login page, but once logged in proper (needed a reinstall lol)
+it connects quickly now<br>
+6. Installed Netbird on PC as well<br>
+7. Got the devices all connected, nice!<br>
+8. Mathy <img src="IMG/Mathy.jpg" alt="Mathy" width="20vw"> advised a check, by checking the ip in cmd with
+<div class="programming">ipconfig | find "IPv4"</div>
+<br> and going to the local ip with a 8000 port<br>
+9. That didn't do no nothing, Mathy <img src="IMG/Mathy.jpg" alt="Mathy" width="20vw">
+told me I need to actually put something there, so I tried her <command>
+<div class="programming">python -m http.server 8000</div>
+<br>
+which gave me an error saying i dont have any Python<br>
+10. Got advice to run a default nginx server with Docker.
+Attempted to find instructions and just got confused, but learned
+that Dockerfiles are text files with Docker instructions.<br>
+All for today
+
+</div>
+</body>
+
+</html>
