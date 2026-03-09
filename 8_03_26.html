@@ -29,7 +29,8 @@ eedda9fd8786: Pull complete<br>
 0019bbecc572: Download complete<br>
 c13150b54a53: Download complete<br>
 Digest: sha256:0236ee02dcbce00b9bd83<br>
-e0f5fbc51069e7e1161bd59d99885b3ae1734f3392e<br>
+e0f5fbc51069e7e1161bd59d<br>
+99885b3ae1734f3392e<br>
 Status: Downloaded newer image for nginx:latest<br>
 docker.io/library/nginx:latest<br>
 </div>
@@ -61,10 +62,12 @@ containing dockerfile and the rest of whatevers.<br>
  => [internal] load build context                                                                                  0.0s<br>
  => => transferring context: 2B                                                                                    0.0s<br>
  => CANCELED [1/2] FROM docker.io/library/nginx:<br>
- latest@sha256:0236ee02dcbce00b9bd83e0f5fbc51069e<br>
+ latest@sha256:0236ee02dcbce00b<br>
+ 9bd83e0f5fbc51069e<br>
  7e1161bd59d99885b  0.0s<br>
  => => resolve docker.io/library/nginx:latest@sha256:<br>
- 0236ee02dcbce00b9bd83e0f5fbc51069e7e1161bd59d99885b3ae1734f3  0.0s<br>
+ 0236ee02dcbce00b9bd83e0f5fbc51<br>
+ 069e7e1161bd59d99885b3ae1734f3  0.0s<br>
  => ERROR [2/2] COPY custom-nginx.conf /etc/nginx/nginx.conf                                                       0.0s<br>
 ------<br>
  > [2/2] COPY custom-nginx.conf /etc/nginx/nginx.conf:<br>
@@ -78,11 +81,13 @@ Dockerfile:2<br>
 ERROR: failed to build: failed to solve:<br>
  failed to compute cache key: <br>
  failed to calculate checksum of ref <br>
- 7fearau3t5pui2bwatdq78hhw::y5212zq3k7zdky1fyp0m5jyoj: <br>
+ 7fearau3t5pui2bwatdq78hhw::<br>
+ y5212zq3k7zdky1fyp0m5jyoj: <br>
  "/custom-nginx.conf": not found<br>
 <br>
 View build details: <br>
-docker-desktop://dashboard/build/desktop-linux/desktop-linux/74pr5utaqsuis7vne4xzc88go
+docker-desktop://dashboard/build/desktop-linux/desktop-linux/<br>
+74pr5utaqsuis7vne4xzc88go
 </div>
 <br>
 Whoop whoop, I have holes in my head.
@@ -104,7 +109,7 @@ Riiight, how do I check on it...
 Entering http://localhost:80 in the browser...
 <br><br>
 <div>
-    <img src="IMG/nginx image 1.png" alt="nginx image 1" width="550vw">
+    <img src="IMG/nginx image 1.png" alt="nginx image 1" width="80%">
 </div>
     <br><br>
 Wha, it works?? <br>
