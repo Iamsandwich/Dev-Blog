@@ -52,3 +52,19 @@ body{
     padding: 2%;
     font-style: italic;
 }
+
+.linkf, .linkb, .link {
+    text-decoration: none;
+    color: rgb(42, 29, 29);
+}
+
+.linkf:hover, .linkb:hover, .link:hover{
+
+    color: rgb(165, 130, 97);
+}
+
+
+.nav{
+    display: flex;
+  justify-content: space-between;
+}
